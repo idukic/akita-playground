@@ -6,7 +6,7 @@
     "akita-state-mn": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
+        "akita-schematics/angular:component": {
           "style": "scss"
         }
       },
@@ -124,5 +124,8 @@
         }
       }
     }},
-  "defaultProject": "akita-state-mn"
+  "defaultProject": "akita-state-mn",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }

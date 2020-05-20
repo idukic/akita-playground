@@ -1,0 +1,18 @@
+<div class="container py-5">
+    <div *ngIf="loading$ | async; else posts ">
+        <h1>Loading...</h1>
+    </div>
+    <ng-template #posts>
+        <div class="row">
+            <div *ngFor="let book of books$ | async" class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">{{book.name}}</h2>
+                        <p class="card-text">by {{book.author}}</p>
+                        <a [routerLink]="[ '/book', book.id ]" class="card-link">book details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>
